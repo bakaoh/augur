@@ -19,6 +19,7 @@ export const NETWORKS = [
   'thunder',
   'testrpc',
   "mainnet",
+  'matic',
 ] as const;
 
 export type NETWORKS = typeof NETWORKS[number];
@@ -90,6 +91,12 @@ const networks: NetworksToOptions = {
           (typeof process.env.ETHEREUM_GAS_PRICE_IN_NANOETH === "undefined")
             ? new ethers.utils.BigNumber(20)
             : new ethers.utils.BigNumber(process.env.ETHEREUM_GAS_PRICE_IN_NANOETH!)).mul(new ethers.utils.BigNumber(1e9)),
+    },
+    matic: {
+        isProduction: false,
+        http: "https://testnet2.matic.network",
+        privateKey: process.env.ETHEREUM_PRIVATE_KEY || "fae42052f82bed612a724fec3632f325f377120592c75bb78adfcceae6470c5a",
+        gasPrice: new ethers.utils.BigNumber(0)
     },
 };
 

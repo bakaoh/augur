@@ -138,5 +138,19 @@
       "connect": true,
       "broadcast": false
     }
+  },
+  "matic": {
+    "ethereum-node": {
+        "http": "https://testnet2.matic.network",
+        "ws": null,
+        "pollingIntervalMilliseconds": 10000,
+        "blockRetention": 100,
+        "connectionTimeout": 60000
+    },
+    "universe": null,
+    "debug": {
+        "connect": true,
+        "broadcast": false
+    }
   }
 }
