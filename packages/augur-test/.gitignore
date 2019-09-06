@@ -1,6 +1,0 @@
-.nyc_output
-node_modules/
-*.log
-tags
-tsconfig-local.json
-seed.json
